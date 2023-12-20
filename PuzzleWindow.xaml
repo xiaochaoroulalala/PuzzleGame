@@ -1,0 +1,11 @@
+﻿<Window x:Class="WpfHello.PuzzleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="PuzzleWindow" Height="300" Width="500" KeyDown="PuzzleGrid_KeyDown">
+    <Grid x:Name="PuzzleGrid">
+
+    </Grid>
+</Window>

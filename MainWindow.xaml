@@ -1,0 +1,28 @@
+﻿<Window x:Class="WpfHello.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+
+
+    <Grid x:Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal"  HorizontalAlignment="Right" VerticalAlignment="Center">
+            <Button Content="Help" Click="HelpButtonClick" VerticalAlignment="Center" FontSize="20" Margin="5,0,5,0" />
+            <Button Content="Change" Click="ChangeButtonClick" VerticalAlignment="Center" FontSize="20" Margin="5,0,5,0" />
+        </StackPanel>
+
+        <Grid Background="White" Grid.Row="1">
+            <StackPanel Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Button Content="Challenge Mode" Click="ChallengeButtonClick" FontSize="30" Margin="0,0,0,10"/>
+                <Button Content="Custom Mode" Click="CustomButtonClick" FontSize="30" Margin="0,10,0,10"/>
+                <Button Content="Exit" Click="ExitButtonClick" FontSize="30" Margin="0,10,0,0" />
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
