@@ -8,27 +8,29 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Img\classic.png" />
     <None Remove="Img\figure.png" />
     <None Remove="Img\view.png" />
-    <None Remove="success.png" />
+    <None Remove="Img\success.png" />
+    <None Remove="Sound\Success_Jingle_by_Kastenfrosch.mp3" />
   </ItemGroup>
 
   <ItemGroup>
     <Content Include="Img\figure.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Img\success.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <Content Include="Img\classic.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Img\success.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Content Include="Sound\Success_Jingle_by_Kastenfrosch.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Img\view.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Content>
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Img\classic.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Content>
   </ItemGroup>
 
 </Project>

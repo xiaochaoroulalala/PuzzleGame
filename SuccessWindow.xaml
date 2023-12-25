@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfHello"
         mc:Ignorable="d"
-        Title="SuccessWindow" Height="450" Width="800">
+        Title="SuccessWindow" Height="400" Width="400">
     <Grid>
-        <Image Source="Img/success.png" Width="200" Height="200"/>
-        <TextBlock x:Name="displayText" Text="恭喜过关" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20"/>
+        <Image Source="Img/success.png" Width="200" Height="200" Margin="100,50,100,135"/>
+        <TextBlock x:Name="DisplaySuccessText" Text="恭喜过关" FontSize="70" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,20"/>
+        <MediaElement x:Name="SuccessMediaPlayer" Source="Sound/Success_Jingle_by_Kastenfrosch.mp3" />
     </Grid>
 </Window>

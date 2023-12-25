@@ -60,7 +60,7 @@ namespace WpfHello
             {
                 for (int j = i + 1; j < length; j++)
                 {
-                    if (puzzle[i] > 0 && puzzle[j] > 0 && puzzle[i] > puzzle[j])
+                    if (puzzle[i] > puzzle[j])
                     {
                         inversions++;
                     }
@@ -75,8 +75,50 @@ namespace WpfHello
         {
             var flattenedPuzzle = FlattenArray(puzzle);
             int inversions = CalculateInversions(flattenedPuzzle);
+            if(puzzle.GetLength(0) == puzzle.GetLength(1))
+                return inversions % 2 == 0;
+            return IsSolvableNotSquareArray(puzzle, inversions);
+        }
 
-            return inversions % 2 != 0;
+        private static bool IsSolvableNotSquareArray(int[,] puzzle, int inversions)
+        {
+            // 对于非方阵的情况，需要考虑空白格子的位置对逆序数的影响
+            int emptyRow = -1; // 空白格子所在行
+            for (int i = 0; i < puzzle.GetLength(0); i++)
+            {
+                for (int j = 0; j < puzzle.GetLength(1); j++)
+                {
+                    if (puzzle[i, j] == 0)
+                    {
+                        emptyRow = i;
+                        break;
+                    }
+                }
+
+                if (emptyRow != -1) // 找到空白格子位置后跳出循环
+                {
+                    break;
+                }
+            }
+
+            // 判断是否有解
+            if (puzzle.GetLength(0) % 2 == 1)
+            {
+                // 非方阵的行数为奇数
+                return inversions % 2 == 0;
+            }
+            else
+            {
+                // 非方阵的行数为偶数
+                if ((puzzle.GetLength(0) - emptyRow) % 2 == 0)
+                {
+                    return inversions % 2 != 0;
+                }
+                else
+                {
+                    return inversions % 2 == 0;
+                }
+            }
         }
     }
 }

@@ -15,7 +15,7 @@ namespace WpfHello
 
         private void RoundConfirmButton_Click(object sender, RoutedEventArgs e)
         {
-            int[,] myArray = null;
+            int[,]? myArray = null;
             var selectedRound = int.Parse(((ComboBoxItem)RoundComboBox.SelectedItem)?.Content.ToString() ?? "1");
             switch (selectedRound)
             {
